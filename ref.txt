@@ -1,0 +1,12 @@
+flex direction:
+row
+column
+y sus reverses
+
+flex-wrap:
+wrap
+no-wrap
+flex-flow
+
+
+en el 818 de ancho se quiebra

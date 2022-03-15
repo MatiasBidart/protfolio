@@ -1,0 +1,385 @@
+:root{
+    --sklls-bar-lngth: 0%
+}
+
+
+
+/* Code CSS */
+*{
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: white;
+   
+}
+.container{
+    position: fixed;
+}
+.mn-lnd{
+    background-color:#197f5b ;
+    max-height: 100%;
+    background-image: url(./assets/bckgrnd-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+img{
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.brdr-crcl{
+    display: block;
+    margin: 0px auto;
+    border-radius: 50%;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+}
+.mn-cntnr{
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1;
+    height: 640px;
+    /* border: 1px black solid; */
+    max-width: 100%;
+}
+.mn-cntnr > *{
+/* border: 1px blue solid; */
+display: flex;
+align-content: center;
+justify-content: center;
+height: 100%;
+margin: 0px;
+position: relative;
+
+}
+
+.lft-side{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    margin-left: 0px;
+  
+}
+.lft-side *{
+    height: auto;
+    display: grid;
+    grid-auto-rows: auto auto auto;
+}
+.lft-side >h1, h2, div{
+   display: flex;
+   justify-content: center;
+   margin: 0px auto;
+}
+.rgth-side{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: blueviolet;
+}
+.rgth-side > *{
+    margin: 0px;
+}
+/* apartir de acá soy ordenado */
+/* Textos */
+.align-cntr{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    font-size: 5rem;
+
+}
+.yllw{
+    color: #EF9919;
+}
+h1 > * {display: flex;
+align-content: space-between;}
+h2 {
+    font-size: large;
+}
+.scrll-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 1.2em;
+    font-size: 22px;
+    color: rgba(#fff,.5);
+    border-radius: 2em;
+    border: solid 2px;
+}
+ .scrll-icon::after {
+    content: '⇣';
+}
+
+.scnd{
+background-color: #F9F5F2;
+width: 100%;
+height: 500px;
+display: flex;
+flex-direction: column;}
+.bx-1{
+    width: 100%;
+    height: 400px;
+    background-color: none;
+}
+.bx-1{
+    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.lrm{margin: auto;
+    font-size: smaller;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    flex-basis: 30%;
+}
+.prtfl-ph {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 70%;
+}
+.scnd > h3{
+display: flex;
+justify-content: center;
+margin: 0px;
+padding-top: 0.8em;
+}
+
+h3 {
+    color: rgb(65, 63, 64);
+    font-size: 3em;
+}
+.bx-2 {
+    border: none;
+    background-color:  rgb(225, 223, 224);
+    padding: 2em;
+    width: 20em;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+}
+.logos{
+    width: 5em;
+    height: 5em;
+}
+.study-bx{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    
+}
+h4{
+    font-size: larger;
+}
+.gry-font{
+    color: rgb(65, 63, 64);
+}
+.smllr{
+    font-size: smaller;
+}
+.lrgr{
+    font-size: larger;
+}
+.sft-brdr{
+    border-radius: 1em;
+}
+.thrd>*{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    max-width: 100%;
+}
+.mrgn-1em{
+    margin: 1em;
+}
+
+/* Pa devovlerlo a las Barras */
+.sklls-br, .sklls-br::after{
+    width: 40em;
+    height: 1em;
+    background-color:rgb(225, 223, 224); 
+    border-radius: 0.5em;
+    position: relative;
+    overflow: hidden;
+}
+.sklls-br::after{
+    content: '';
+    position: absolute;
+    background-color: #197f5b;
+    left: -40em;
+    transition: var(--transition);
+    animation: sklls-bar-fill 1s ease-in-out forwards;
+}
+.lvls{
+    display: flex;
+    flex-direction: column;
+}
+.sklls-br-80::after{
+    --sklls-bar-lngth:80%
+}
+.sklls-br-95::after{
+    --sklls-bar-lngth:95%
+}
+.sklls-br-75::after{
+    --sklls-bar-lngth:75%
+}
+@keyframes sklls-bar-fill { 
+    to{
+        transform: translateX(var(--sklls-bar-lngth));
+    }
+    
+}
+/* Third */
+.thrd {
+    margin: 0px;
+    max-width: 100%;
+    height: 60em;
+    display: flex;
+    flex-direction: column;
+}
+.cntnt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+}
+.cntnt>*{
+    margin: 0px;
+}
+h5{
+    font-size: small;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    justify-content: center;
+    color: rgb(65, 63, 64);
+}
+.bckgrnd-gry{
+    background-color: rgb(225, 223, 224);
+    height: 2em;
+}
+.bckgrnd-yllw{
+    background-color:#EF9919;
+    max-width: 50%;
+    height: 2em;
+}
+
+.tch-sklls-bx{
+    margin-top: 4em;
+    padding: 0.8em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #085037 ;
+    min-height: 20em;
+    width: 80%;
+    border-radius: 0.3em;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+.clmn{
+    display: flex;
+    flex-direction: column;
+}
+.pddng-top-2em{
+    padding-top: 2em;
+}
+.wdth-100{
+    width: 100%;
+}
+/* Fourth */
+.bckgrnd-grnn{
+    background-color: #197f5b;
+    display:flex;
+    flex-direction: row;
+    min-height: 50em;
+}
+.brdr-0{
+    margin: 0px;
+    padding: 0px;
+}
+.wht-font{
+    color: white;
+}
+.pddng-top-3em{
+    padding-top: 1.5em;
+}
+.btn-grnn{
+    background-color: #085037;
+    border-style: none;
+    width: 12em;
+    height: 4em;
+}
+.brdr-wht{
+    border: #F9F5F2 1px solid;
+}
+.error-1{
+    display: flex;
+    flex-direction: column;
+}
+.spc-btwn {
+    display: flex;
+    justify-content: space-evenly;
+}
+#prtfl-bx{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#bg-scrnn{
+    max-width: 50em;
+    height: 30em;
+    overflow: hidden;
+}
+#bg-scrnn:hover{
+    background-color: #EF9919;
+}
+.pddng-1em{
+    padding: 1em;
+}
+.mx-hgth-30em{
+    /* max-height: 15em; */
+    height: 22em;
+}
+.mda-bx{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.spc-btwn-orgnl{
+    display:flex;
+    justify-content: space-between;
+}
+#cntct-lst>li>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
