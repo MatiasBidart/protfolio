@@ -1,6 +1,8 @@
-const menuHamburguesa = document.querySelector('#menuHamburguesa');
-      menu = document.querySelector('#nvbr-fn')
-menuHamburguesa.addEventListener('click', (e)=>{
-    menu.classList.toggle('.active');
-    
-})
+// ahora está vacío
+const ham = document.querySelector('.brgr-mn');
+const enlaces = document.querySelector('.nvbr-fnt')
+function desplegar(){
+    enlaces.style.display = 'block';
+    console.log(enlaces)
+    console.log(ham)
+};

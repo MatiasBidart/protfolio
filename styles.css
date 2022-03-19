@@ -2,9 +2,7 @@
     --sklls-bar-lngth: 0%
 }
 /* Javascipt Styles - Event Onclick */
-.active{
-    transform: rotateX(600em);
-}
+
 /* Code CSS */
 *{
     width: auto;
@@ -31,7 +29,7 @@
    padding-left: 0em;
    width: 8em;
    margin-top: 1em;
-   margin-right: -600em;
+   margin-right: 0em;
    margin-left: 0em;
 }
 .nvbr-fnt>li{
@@ -40,7 +38,7 @@
 }
 .navbar ul{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .brgr-mn{
     margin: 0px;
@@ -53,8 +51,31 @@ a{
 .brgr-mn-size{
     width: 20px;
     height: 20px;
-    margin-right: 1em;
+    margin-left: 1em;
 }
+/* Para el checkbox */
+/* /* tendría que hacer un display none para .nvbr-fnt */
+.nvbr-fnt *{
+    display: block;
+}
+ .navbar> ul{
+    display:none
+} 
+ .nvbr-fnt.activado{
+    display: flex
+} 
+/* epic */
+.brgr-mn{
+    background-color: none;
+    border: none;
+    color: none;
+    margin: 0px;
+    background-color: #085037;
+}
+.brgr-mn:active{
+    background-color: #197f5b;
+}
+/* hasta acá */
 .mn-lnd{
     background-color:#197f5b ;
     max-height: 100%;
@@ -80,7 +101,7 @@ img{
     flex-direction: row;
     margin: 0px;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 
@@ -446,8 +467,13 @@ li{
 }
 /* MQ */
 @media (min-width: 600px) {
+    .navbar> ul{
+        display:flex;}
     h1{
         font-size: 60px;
+    }
+    .brgr-mn{
+        display: none;
     }
     .study-bx{
         display: grid;
@@ -625,5 +651,11 @@ li{
        margin-top: 1em;
        margin-right: 0em;
        margin-left: 0em;
+       
     }
+    .navbar> ul{
+        display:flex;}
+        .brgr-mn{
+            display: none;
+        }
 }
